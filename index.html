@@ -38,8 +38,8 @@
 
         <section>
             <h2>General Attribute Value Selector</h2>
-            <p>You can use this to apply css properties to any specified content. This example would change the font size of every class containing the letters "me".</p>
-            <pre><code>[class*="me"] {
+            <p>Change "class" to a specified class and "val" to the value you are searching for.</p>
+            <pre><code>[class*="val"] {
     font-size: 20px;
 }</code></pre>
         </section>
@@ -58,19 +58,16 @@
         <section>
             <h2>Box Transition Glow</h2>
             <p>This adds a glow effect when you hover over an item.</p>
-            <pre><code>.code-card .card-header {
-    border-radius: 8px;
+            <pre><code>section:hover {
+    border-radius: 5px;
+    box-shadow: 0 0 20px 10px orange;
     transition: all 0.5s ease-in-out;
-}
-              
-.code-card:hover, .code-card:hover .card-header {
-    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
 }</code></pre>
         </section>
 
         <section>
             <h2>Flexbox Row w/ Wrap using Flex Flow</h2>
-            <p>This allows you to define a flex row with just one line!</p>
+            <p>This allows you to define a wrapping flex row with just one line!</p>
             <pre><code>div {
     flex-flow: row wrap;
 }</code></pre>
