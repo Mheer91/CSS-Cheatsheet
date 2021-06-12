@@ -1,27 +1,36 @@
+:root {
+    --purp: darkmagenta;
+    --gtext: 3px 0px 5px white;
+
+}
+
 body {
     font-family: 'Press Start 2P', cursive;
     font-size: 18px;
+    height: 100%;
 }
 
 header {
     text-align: center;
-    background-color: darkmagenta;
+    background-color: var(--purp);
     border-color: black;
     border-style: solid;
+    text-shadow: var(--gtext);
     width: 100%;
     top: 0;
-    padding: 2px;
+    padding: 5px;
 }
 
 header p {
     font-size: 14px;
     padding: 5px;
+    text-shadow: var(--gtext);
 }
 
 main {
     display: flex;
     flex-flow: row wrap;
-    justify-content:  space-evenly;
+    justify-content:  space-around;
     height: 100vh;
     padding: 2em;
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
@@ -30,8 +39,8 @@ main {
 section {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    width: 300px;
+    justify-content: center;
+    width: 33%;
     height: 300px;
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
@@ -42,8 +51,9 @@ section {
 }
 
 section p {
-    font-size: 9px;
+    font-size: .5em;
     text-align: center;
+    text-shadow: var(--gtext);
     height: fit-content;
 }
 
@@ -56,8 +66,9 @@ section:hover {
 h2 {
     font-size: 13px;
     text-align: center;
+    text-shadow: var(--gtext);
     border-bottom: solid black;
-    background-color:darkmagenta;
+    background-color: var(--purp);
     width: 100%;
     height: 45px;
     padding: 10px;
@@ -65,17 +76,20 @@ h2 {
 }
 
 pre {
+    display: flex;
+    justify-content: left;
+    align-items: center;
     background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
     border-color: black;
     border-style: solid;
+    border-radius: 5px;
     width: 280px;
-    height: 200px;
-   
+    height: fit-content;
+    padding: 20px;
 }
 
 pre:active {
     user-select: all;
-    background-color: white;
 }
 
 code {
@@ -88,5 +102,24 @@ code {
 footer {
     text-align: center;
     font-size: 15px;
-    background-color: darkturquoise;
+    background-color: var(--purp);
+    box-shadow: -2px -2px 10px black;
+    
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        width: 50%;
+    }
+
+    body {
+        height: 100vl;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        width: 90%;
+    }
+    
 }
