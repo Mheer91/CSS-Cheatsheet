@@ -7,7 +7,7 @@
 body {
     font-family: 'Press Start 2P', cursive;
     font-size: 18px;
-    min-height: 100%;
+    
 }
 
 header {
@@ -30,9 +30,11 @@ header p {
 main {
     display: flex;
     flex-flow: row wrap;
-    justify-content:  space-around;
-    padding: 2em;
+    justify-content: space-around;
+    padding: 1em;
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    height: 100vh;
+    
 }
 
 section {
@@ -54,9 +56,10 @@ section p {
     text-align: center;
     text-shadow: var(--gtext);
     height: fit-content;
+
 }
 
-section:hover {
+section:hover, section:focus {
     border-radius: 5px;
     box-shadow: 0 0 20px 10px chartreuse;
     transition: all 0.5s ease-in-out;
@@ -106,15 +109,23 @@ footer {
     
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
     section {
         width: 50%;
+    }
+
+    main {
+        height: 100vh;
     }
 }
 
 @media screen and (max-width: 768px) {
     section {
         width: 90%;
+    }
+
+    main {
+        height: fit-content;
     }
     
 }
