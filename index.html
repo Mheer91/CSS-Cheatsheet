@@ -22,9 +22,10 @@
         <section>
             <h2>Media Query</h2>
             <p>You can use this Media Query to change the flex display depending on screen size.</p>
-            <pre><code>@media only screen and (max-width: 600px) {
-    flex-wrap: wrap;
-    flex-direction: column;
+            <pre><code>@media screen and (max-width: 768px) {
+    section {
+        width: 90%;
+    }
 }</code></pre>
         </section>
 
@@ -45,22 +46,19 @@
         </section>
 
         <section>
-            <h2>Fixed Header</h2>
-            <p>This is a simple fixed header that sticks when you scroll.</p>
-            <pre><code>header {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
+            <h2>Root Variable for Text Shadow</h2>
+            <p>This is a simple root variable (--gtext) that gives text a white glow.</p>
+            <pre><code>:root {
+    --gtext: 3px 0px 5px white
 }</code></pre>
         </section>
 
         <section>
             <h2>Box Transition Glow</h2>
-            <p>This adds a glow effect when you hover over an item.</p>
+            <p>This adds a green glow effect when you hover over an item. Change the color to make it your own!</p><br>
             <pre><code>section:hover {
     border-radius: 5px;
-    box-shadow: 0 0 20px 10px orange;
+    box-shadow: 0 0 20px 10px chartreuse;
     transition: all 0.5s ease-in-out;
 }</code></pre>
         </section>
